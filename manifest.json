@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Color Extension",
+  "version": "1.0",
+  "description": "Change Font Color",
+  "permissions": ["activeTab", "tabs", "scripting"],
+  "icons": {
+    "128": "trend.png",
+    "48": "trend.png",
+    "16": "trend.png"
+  },
+  "action": {
+    "default_icon": "trend.png",
+    "default_popup": "popup.html",
+    "default_title": "Color"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ant.design/",
+        "https://github.com/*",
+        "https://app.slack.com/*",
+        "https://www.thehindu.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ]
+}
